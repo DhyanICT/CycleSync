@@ -1,0 +1,68 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.code.chatboat'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.code.chatboat"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+
+
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+
+    implementation 'com.google.code.gson:gson:2.10.1'
+    implementation "com.applandeo:material-calendar-view:1.9.2"
+    implementation "com.github.PhilJay:MPAndroidChart:v3.1.0"
+    implementation "com.github.anangkur:Material-Loading-Button:0.0.1"
+    implementation "de.hdodenhof:circleimageview:3.1.0"
+    // Room Database
+    implementation "androidx.room:room-runtime:2.5.2" // Change to the latest version
+    annotationProcessor "androidx.room:room-compiler:2.5.2" // Change to the latest version
+    implementation 'com.airbnb.android:lottie:6.1.0'
+
+    implementation 'com.github.MasayukiSuda:BubbleLayout:v1.2.2'
+
+}
+
+// Ensure all Kotlin compile tasks target Java 1.8
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}

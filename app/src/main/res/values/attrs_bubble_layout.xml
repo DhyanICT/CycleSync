@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="BubbleLayout">
+
+        <attr name="android:background" />
+        <attr name="cornerRadius" format="dimension" />
+
+        <attr name="cornerRadiusTopLeft" format="dimension" />
+        <attr name="cornerRadiusTopRight" format="dimension" />
+        <attr name="cornerRadiusBottomRight" format="dimension" />
+        <attr name="cornerRadiusBottomLeft" format="dimension" />
+
+        <attr name="arrowAlignment" format="enum">
+            <enum name="none" value="0" />
+            <enum name="leftTop" value="1" />
+            <enum name="leftCenter" value="2" />
+            <enum name="leftBottom" value="3" />
+            <enum name="rightTop" value="4" />
+            <enum name="rightCenter" value="5" />
+            <enum name="rightBottom" value="6" />
+            <enum name="bottomLeft" value="7" />
+            <enum name="bottomCenter" value="8" />
+            <enum name="bottomRight" value="9" />
+            <enum name="topLeft" value="10" />
+            <enum name="topCenter" value="11" />
+            <enum name="topBottom" value="12" />
+        </attr>
+
+        <attr name="arrowShape" format="enum">
+            <enum name="TriangleRight" value="0" />
+            <enum name="TriangleIsosceles" value="1" />
+            <enum name="Curved" value="2" />
+        </attr>
+
+        <attr name="arrowWidth" format="dimension" />
+        <attr name="arrowHeight" format="dimension" />
+        <attr name="arrowRadius" format="dimension" />
+        <attr name="arrowOffsetX" format="dimension" />
+        <attr name="arrowOffsetY" format="dimension" />
+        <attr name="withArrow" format="boolean" />
+
+        <attr name="shadowStyle" format="enum">
+            <enum name="elevation" value="0" />
+            <enum name="shadow" value="1" />
+        </attr>
+
+        <attr name="android:shadowRadius" format="dimension" />
+        <attr name="android:shadowDx" format="dimension" />
+        <attr name="android:shadowDy" format="dimension" />
+        <attr name="android:shadowColor" format="color" />
+    </declare-styleable>
+</resources>

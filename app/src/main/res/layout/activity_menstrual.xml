@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".activity.MenstrualActivity">
+
+
+    <LinearLayout
+        android:layout_marginTop="25dp"
+        android:id="@+id/llHeader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dimens_40dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:adjustViewBounds="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_back" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15dp"
+            android:text="Calender"
+            android:textColor="@color/textColor"
+            android:textSize="25sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@+id/llHeader"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/layout_menstrual"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0dp"
+        style="@style/LinearVerticalDefault">
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendar_menstrual"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimens_0dp"
+            android:layout_weight="4"
+            app:pagesColor="@color/bg"
+            app:abbreviationsBarColor="@color/bg"
+            app:headerColor="@color/bg"
+            app:headerLabelColor="@color/black"
+            app:forwardButtonSrc="@drawable/ic_navigate_next_black_24dp"
+            app:previousButtonSrc="@drawable/ic_keyboard_arrow_left_black_24dp"/>
+        <RelativeLayout
+            style="@style/RelativeDefault"
+            android:layout_height="@dimen/dimens_0dp"
+            android:layout_weight="3">
+
+            <LinearLayout
+                android:id="@+id/layout_illustration_menstrual"
+                style="@style/LinearVerticalDefault"
+                android:layout_centerInParent="true"
+                android:background="@drawable/rect_gradient_red"
+                android:gravity="center"
+                android:padding="@dimen/dimens_20dp">
+
+                <TextView
+                    android:id="@+id/tv_count_day"
+                    style="@style/TextBoldBig"
+                    android:text="@string/dummy_day"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/iv_status_menstrual"
+                    style="@style/ImageViewWrapAll"
+                    android:layout_marginTop="@dimen/dimens_20dp"
+                    android:src="@drawable/ic_blood" />
+
+                <TextView
+                    android:id="@+id/tv_date"
+                    style="@style/TextBoldBig"
+                    android:layout_marginTop="@dimen/dimens_20dp"
+                    android:text="@string/dummy_date"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_label_menstrual"
+                    style="@style/TextBoldBig"
+                    android:layout_marginTop="@dimen/dimens_10dp"
+                    android:text="@string/dummy_status_menstrual"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_next_menstrual"
+                    style="@style/TextBoldBig"
+                    android:layout_marginTop="@dimen/dimens_10dp"
+                    android:text="@string/dummy_next_period"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+
+                <com.anangkur.materialloadingbutton.MaterialLoadingButton
+                    android:id="@+id/btn_log_period"
+                    android:layout_width="@dimen/dimens_200dp"
+                    android:layout_height="@dimen/dimens_48dp"
+                    android:layout_marginTop="@dimen/dimens_10dp"
+                    android:visibility="gone"
+                    app:mlb_cornerRadius="@dimen/dimens_100dp"
+                    app:mlb_defaultColor="@color/colorPrimary"
+                    app:mlb_textButton="@string/btn_log_period"
+                    app:mlb_textColor="@color/white" />
+            </LinearLayout>
+            <ProgressBar
+                android:id="@+id/pb_menstrual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
