@@ -1,4 +1,4 @@
-# PeriodTrackerChatBoat
+# CycleSync
 
 An Android menstrual cycle tracking app with a built-in offline FAQ chatbot.  
 This app helps users track their period, symptoms, and cycle history while also allowing them to ask health-related questions to a simple chatbot.
