@@ -19,8 +19,8 @@ Follow these steps so anyone can run the project easily.
 
 ### 2. Clone or Download the Project
 
-git clone 
-cd PeriodTrackerChatBoat
+git clone https://github.com/DhyanICT/CycleSync.git 
+
 
 ## 📌 Features of the Application
 
