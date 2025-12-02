@@ -79,7 +79,6 @@ Below are all the UI screens included in the app:
 - JSON-powered responses  
 
 ### *7. Settings Screen*
-- Change language  
 - View About Us  
 - Open Privacy Policy  
 - Share the app  
